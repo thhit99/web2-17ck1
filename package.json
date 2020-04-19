@@ -1,15 +1,16 @@
 {
-  "name": "hello-web2-1760071",
-  "version": "1.0.0",
-  "description": "",
-  "main": "sever.js",
-  "dependencies": {
-    "portfolio": "^0.1.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Huy Hoàng <thh.it99@gmail.com>",
-  "license": "ISC"
+    "name": "hello-web2-1760071",
+    "version": "1.0.0",
+    "description": "",
+    "main": "sever.js",
+    "dependencies": {
+        "portfolio": "^0.1.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": " node sever.js"
+    },
+    "author": "Huy Hoàng <thh.it99@gmail.com>",
+    "license": "ISC"
 }
