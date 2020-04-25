@@ -1,18 +1,21 @@
-const http = require('http');
+const express = require('express');
+
 const port = process.env.PORT || 3000;
+const app = express();
+app.set('views', './views');
+app.set('view engine', 'ejs');
+app.get('/', function(req, res) {
+    const name = req.query.name || ' World ';
+    res.end(` Hello ${name} from express `);
+});
 
-const requestHandler = (request, response) => {
-    const url = new URL(request.URL, `http://${request.headers.port} `);
-    const name = url.searchParams.get('name') || ' World';
-    response.end(`Hello ${name} from NodeJS `);
-}
+app.get('/hello', function(req, res) {
+    res.end('Hello Router ');
+});
 
-const server = http.createServer(requestHandler);
-
-server.listen(port, (err) => {
-    if (err) {
-        return console.log('something bad happened', err);
-    }
-
-    console.log(`server is listening on ${port}`);
-})
+app.get('/covid19', function(req, res) {
+    res.render('covid19');
+});
+app.use(express.static('public'));
+app.listen(port);
+console.log(` Sever is listenning on port   ${port} `);
