@@ -1,0 +1,21 @@
+<%- include('header', {title: ' PROFILE '}); -%>
+
+    <ul>
+        <li><strong> ID </strong> :
+            <%= currentUser.id %>
+        </li>
+        <li><strong> Email </strong> :
+            <%= currentUser.email %>
+        </li>
+        <li><strong> DisplayName </strong> :
+            <%= currentUser.displayName %>
+        </li>
+    </ul>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="avatar">Avatar</label>
+            <input type="file" class="form-control-file" id="avatar" name="avatar">
+        </div>
+        <button type="submit" class="btn btn-primary">Uppppp</button>
+    </form>
+    <%- include('footer'); -%>

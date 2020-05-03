@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Hello web 2 </title>
-</head>
-
-<body>
-    <div class="container">
-        <h1> TOTAL NUMBER
-        </h1>
-        <form action="/sum" method="POST">
-            <div class="form-group">
-                <label for="a">Number 1  </label>
-                <input type="number" class="form-control" id="a" name="a">
-            </div>
-            <div class="form-group">
-                <label for="b">Number 2 </label>
-                <input type="number" class="form-control" id="b" name="b">
-            </div>
-            <button type="submit" class="btn btn-primary">TOTAL</button>
-        </form>
-    </div>
-</body>
-
-</html>
+<%- include('header', {title: 'Trang chu '}); -%>
+    <p> Xin chao
+        <%= currentUser?currentUser.displayName : ' Khachhhhhh' %>
+    </p>
+    <%- include('footer'); -%>
